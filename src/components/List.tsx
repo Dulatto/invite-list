@@ -9,7 +9,7 @@ interface IProps {
     }[]
   }
 
-const List: FC<IProps> = () => {
+const List: FC<IProps> = ({people}) => {
     return (
         <div>
             I am a list;
