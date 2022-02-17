@@ -2,14 +2,20 @@ import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+interface IState {
+  people:{
+    name: string;
+    age: number;
+    url: string;
+    note?: string
+  }[]
+}
+
 function App() {
 
-  const [people, setPeople] = useState([{
-    name: 'LeBron James',
-    url: '',
-    age: 36,
-    note: 'Allergic to staying on the same team'
-  }])
+  const [people, setPeople] = useState<IState["people"]>([]);
+
+
 
   return (
     <div className="App">
